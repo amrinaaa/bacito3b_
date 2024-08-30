@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from "../../assets/logo.png";
 
 const Navbar = () => {
@@ -24,11 +25,31 @@ const Navbar = () => {
         >
           <img src={Logo} alt="" className="h-16" />
 </Link>
-
-
         </div>
         {/*Navlinks section */}
       </div>
+      <ul>
+      <li className="py-4">
+      <NavLink to= "/" onClick={() => window.scrollTo(0, 0)}>
+      Dasbor
+      </NavLink>
+      </li>
+      <li className="py-4">
+      <NavLink to= "/blog" onClick={() => window.scrollTo(0, 0)}>
+      Blog
+      </NavLink>
+      </li>
+      <li className="py-4">
+      <NavLink to= "/tempatwisata" onClick={() => window.scrollTo(0, 0)}>
+      Tempat Wisata
+      </NavLink>
+      </li>
+      <li className="py-4">
+      <NavLink to= "/tentangbalikpapan" onClick={() => window.scrollTo(0, 0)}>
+      Tentang Balikpapan
+      </NavLink>
+      </li>
+      </ul>
       </div>
     </div>
     </div>
