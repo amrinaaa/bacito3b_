@@ -31,13 +31,23 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/blog" onClick={() => window.scrollTo(0, 0)}>
-                    Blog
+                  <NavLink to="/kuliner" onClick={() => window.scrollTo(0, 0)}>
+                    Kuliner
                   </NavLink>
                 </li>
                 <li className="py-4">
-                  <NavLink to="/tempatwisata" onClick={() => window.scrollTo(0, 0)}>
-                    Tempat Wisata
+                  <NavLink to="/wisata" onClick={() => window.scrollTo(0, 0)}>
+                    Wisata
+                  </NavLink>
+                </li>
+                <li className="py-4">
+                  <NavLink to="/penginapan" onClick={() => window.scrollTo(0, 0)}>
+                    Penginapan
+                  </NavLink>
+                </li>
+                <li className="py-4">
+                  <NavLink to="/perjalanan" onClick={() => window.scrollTo(0, 0)}>
+                    Perjalanan
                   </NavLink>
                 </li>
                 <li className="py-4">
