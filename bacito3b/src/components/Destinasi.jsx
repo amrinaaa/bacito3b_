@@ -1,13 +1,13 @@
 import React from 'react';
 import destinations from '../data/destinasi';
-import panah from '../assets/panah.png'; // Ganti dengan path yang sesuai jika diperlukan
-import lokasiIcon from '../assets/lokasi.png'; // Ganti dengan path ikon lokasi Anda
-
+import panah from '../assets/panah.png';
+import lokasiIcon from '../assets/lokasi.png';
+import hargaIcon from '../assets/price.png';
 const Destinasi = () => {
   return (
     <div className="flex flex-col items-center p-6"> 
       <div className="flex justify-between items-center w-full mb-6"> 
-      {/* Kontainer untuk judul dan tombol */}
+        {/* Kontainer untuk judul dan tombol */}
         <h1 className="text-2xl font-bold text-font_gelap">Destinasi Terpopuler</h1>
         <div className="text-center"> {/* Mengatur tombol agar di kanan */}
           <button className="mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center">
@@ -34,7 +34,10 @@ const Destinasi = () => {
             </div>
             <div className="flex justify-between items-center mt-4">
               <span className="text-yellow-500 font-bold">⭐ {destination.rating}</span>
-              <span className="font-bold">{destination.price}</span>
+              <div className="flex items-center">
+                <img src={hargaIcon} alt="Harga" className="mr-1 w-4 h-4" /> {/* Ikon harga */}
+                <span className="font-bold">{destination.price}</span>
+              </div>
             </div>
           </div>
         ))}
