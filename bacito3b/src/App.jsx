@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import Berita from './components/Berita';
-import Destinasi from './components/Destinasi';
+import BeritaSelengkapnya from './components/BeritaSelengkapnya';
+import DestinasiSelengkapnya from './components/DestinasiSelengkapnya';
 import PopUpDestinasi from './components/PopUpDesitinasi';
-import Tentang from './components/Tentang';
 
 const App = () => {
   return (
@@ -12,12 +11,10 @@ const App = () => {
       <Routes>
         {/* Route khusus untuk LandingPage */}
         <Route path="/" element={<LandingPage />} />
-        
         {/* Route lainnya */}
-        <Route path="tentang" element={<Tentang />} />
-        <Route path="berita" element={<Berita />} />
-        <Route path="destinasi" element={<Destinasi />} />
-        <Route path="popup" element={<PopUpDestinasi />} />
+        <Route path="berita-pariwisata" element={<BeritaSelengkapnya />} />
+        <Route path="destinasi-pariwisata" element={<DestinasiSelengkapnya />} />
+        <Route path="popup-pariwisata" element={<PopUpDestinasi />} />
       </Routes>
     </BrowserRouter>
   );

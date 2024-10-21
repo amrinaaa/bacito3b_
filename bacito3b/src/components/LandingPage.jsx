@@ -1,6 +1,10 @@
 import React from 'react'
+import Beranda from './Beranda';
+import Destinasi from './Destinasi';
+import Tentang from './Tentang';
+import Footer from './Footer';
 
-const LandingPage = () => {
+const Navbar = () => {
   return (
     <div>
       <p>landing</p>
@@ -8,4 +12,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default Navbar
