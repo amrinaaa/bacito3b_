@@ -1,11 +1,11 @@
 import React from 'react'
 
-const PlaceRoute = () => {
+const Berita = () => {
   return (
     <div>
-      
+      berita
     </div>
   )
 }
 
-export default PlaceRoute
+export default Berita

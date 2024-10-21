@@ -1,25 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Layout from './pages/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Blogs from './pages/Blogs';
-import BlogsDetails from './pages/BlogsDetails';
-import PlaceRoute from './pages/PlaceRoute';
-import NoPage from './pages/NoPage';
+import LandingPage from './components/LandingPage';
+import Berita from './components/Berita';
+import Destinasi from './components/Destinasi';
+import PopUpDestinasi from './components/PopUpDesitinasi';
+import Tentang from './components/Tentang';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="blogs/:id" element={<BlogsDetails />} />
-          <Route path="places" element={<PlaceRoute />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
+        {/* Route khusus untuk LandingPage */}
+        <Route path="/" element={<LandingPage />} />
+        
+        {/* Route lainnya */}
+        <Route path="tentang" element={<Tentang />} />
+        <Route path="berita" element={<Berita />} />
+        <Route path="destinasi" element={<Destinasi />} />
+        <Route path="popup" element={<PopUpDestinasi />} />
       </Routes>
     </BrowserRouter>
   );

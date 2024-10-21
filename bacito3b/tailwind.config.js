@@ -7,8 +7,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0287a8",
-        secondary: "#00c3c7",
+        primary: "#4D869C",
+        secondary: "#7AB2B2",
+        based: "#EEF7FF",
+        softblue: "#CDE8E5",
+
+        latar0: "#A6CFE0",
+        latar1: "#EAF5FE",
+        input: "#CDE8E5",
+        font_putih: "#FFFFFF",
+        font_gelap: "#3A4A51",
+        button: "#7AB2B2",
+        icon: "#4D869C",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       },
       container: {
         padding: {
