@@ -31,22 +31,22 @@ const Navbar = () => {
             style={{ transition: 'top 0.3s ease-in-out' }} // Efek transisi untuk menu
           >
             <li>
-              <Link to="/beranda" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/beranda" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300 font-poppins">
                 Beranda
               </Link>
             </li>
             <li>
-              <Link to="/destinasi" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/destinasi" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300 font-poppins">
                 Destinasi
               </Link>
             </li>
             <li>
-              <Link to="/tentang" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/tentang" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300 font-poppins">
                 Tentang
               </Link>
             </li>
             <li>
-              <Link to="/kontak" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/kontak" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300 font-poppins">
                 Kontak
               </Link>
             </li>
@@ -54,17 +54,17 @@ const Navbar = () => {
         </div>
 
         {/* Menu Navbar untuk tampilan desktop */}
-        <div className="hidden md:flex space-x-4">
-          <Link to="/beranda" className="text-white text-sm md:text-xl hover:text-gray-300">
+        <div className="hidden md:flex space-x-4 gap-10">
+          <Link to="/beranda" className="text-white text-sm md:text-xl hover:text-gray-300 font-poppins">
             Beranda
           </Link>
-          <Link to="/destinasi" className="text-white text-sm md:text-xl hover:text-gray-300">
+          <Link to="/destinasi" className="text-white text-sm md:text-xl hover:text-gray-300 font-poppins">
             Destinasi
           </Link>
-          <Link to="/tentang" className="text-white text-sm md:text-xl hover:text-gray-300">
+          <Link to="/tentang" className="text-white text-sm md:text-xl hover:text-gray-300 font-poppins">
             Tentang
           </Link>
-          <Link to="/kontak" className="text-white text-sm md:text-xl hover:text-gray-300">
+          <Link to="/kontak" className="text-white text-sm md:text-xl hover:text-gray-300 font-poppins">
             Kontak
           </Link>
         </div>

@@ -12,7 +12,7 @@ const Beranda = () => {
         <div className="text-center text-white">
           <h1 className="text-8xl md:text-9xl font-bold font-kaisei">Bacito</h1>
           <div className="bg-white bg-opacity-60 rounded-3xl p-8 shadow-lg text-center max-w-5xl w-10/12 mx-auto mt-24">
-            <p className="text-sm md:text-base lg:text-lg text-center text-font_gelap">
+            <p className="text-sm md:text-base lg:text-lg text-center text-font_gelap font-poppins ">
               Jelajahi keindahan dan keunikan Kota Balikpapan bersama BACITO! Dari pantai yang memukau hingga warisan budaya yang kaya, Balikpapan siap menyambutmu dengan destinasi wisata spektakuler, pengalaman seru, dan keajaiban di setiap sudut!
             </p>
             <Link to="/selengkapnya">
