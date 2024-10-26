@@ -1,8 +1,8 @@
 import React from 'react';
 import destinations from '../data/destinasi';
-import panah from '../assets/panah.png'; // Ganti dengan path yang sesuai jika diperlukan
-import lokasiIcon from '../assets/lokasi.png'; // Ganti dengan path ikon lokasi Anda
-
+import panah from '../assets/panah.png';
+import lokasiIcon from '../assets/lokasi.png';
+import hargaIcon from '../assets/price.png';
 const Destinasi = () => {
   return (
     <div className="flex flex-col items-center p-6"> 
@@ -35,8 +35,11 @@ const Destinasi = () => {
               <p>{destination.location}</p> {/* Memusatkan lokasi */}
             </div>
             <div className="flex justify-between items-center mt-4">
-              <span className="text-yellow-500 font-bold font-poppins">⭐ {destination.rating}</span>
-              <span className="font-bold font-poppins text-font_gelap">{destination.price}</span>
+              <span className="text-yellow-500 font-bold">⭐ {destination.rating}</span>
+              <div className="flex items-center ">
+                <img src={hargaIcon} alt="Harga" className="mr-1 w-4 h-4" /> {/* Ikon harga */}
+                <span className="font-bold ">{destination.price}</span>
+              </div>
             </div>
           </div>
         ))}
