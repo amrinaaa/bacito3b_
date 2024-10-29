@@ -40,7 +40,7 @@ const destinations = [
         image: pantaiKemala,
       },
       {
-        id: 4,
+        id: 5,
         name: 'Taman Bekapai',
         location: 'Balikpapan Kota',
         price: 'IDR Gratis',
@@ -48,8 +48,16 @@ const destinations = [
         image: tamanBekapai,
       },
       {
-        id: 4,
+        id: 6,
         name: 'Pantai Banua Patra',
+        location: 'Balikpapan Kota',
+        price: 'IDR 10.000',
+        rating: 4.5,
+        image: banuaPatra,
+      },
+      {
+        id: 7,
+        name: 'Pantai Mulawarman',
         location: 'Balikpapan Kota',
         price: 'IDR 10.000',
         rating: 4.5,
