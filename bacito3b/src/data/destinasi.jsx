@@ -6,6 +6,7 @@ import tamanBekapai from '../assets/bekapai.png';
 import banuaPatra from '../assets/banuaPatra.png';
 
 
+
 const destinations = [
     {
       id: 1,
