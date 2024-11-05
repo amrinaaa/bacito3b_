@@ -22,7 +22,6 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-        kaisei: ["Kaisei Decol", "cursive"],
       },
       container: {
         padding: {
