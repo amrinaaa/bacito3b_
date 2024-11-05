@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import Beranda from './Beranda';
 import Destinasi from './Destinasi';
+import Berita from './Berita'
 
 const LandingPage = () => {
   return (
@@ -9,6 +10,7 @@ const LandingPage = () => {
       <Navbar />
       <Beranda />
       <Destinasi />
+      <Berita />
     </div>
   );
 };
