@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-latar0 p-4 relative">
+    <nav className="bg-latar0 p-2 fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <img src="/src/assets/logo.png" alt="Logo" className="h-12 w-auto" />
@@ -31,22 +31,22 @@ const Navbar = () => {
             style={{ transition: 'top 0.3s ease-in-out' }} // Efek transisi untuk menu
           >
             <li>
-              <Link to="/beranda" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/beranda" className="font-sans block text-white text-sm md:text-xl p-4 hover:text-gray-300">
                 Beranda
               </Link>
             </li>
             <li>
-              <Link to="/destinasi" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/destinasi" className="font-sans block text-white text-sm md:text-xl p-4 hover:text-gray-300">
                 Destinasi
               </Link>
             </li>
             <li>
-              <Link to="/tentang" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/tentang" className="font-sans text-white text-sm md:text-xl p-4 hover:text-gray-300">
                 Tentang
               </Link>
             </li>
             <li>
-              <Link to="/kontak" className="block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/kontak" className="font-sans block text-white text-sm md:text-xl p-4 hover:text-gray-300">
                 Kontak
               </Link>
             </li>
@@ -55,16 +55,16 @@ const Navbar = () => {
 
         {/* Menu Navbar untuk tampilan desktop */}
         <div className="hidden md:flex space-x-4">
-          <Link to="/beranda" className="text-white text-sm md:text-xl hover:text-gray-300">
+          <Link to="/beranda" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
             Beranda
           </Link>
-          <Link to="/destinasi" className="text-white text-sm md:text-xl hover:text-gray-300">
+          <Link to="/destinasi" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
             Destinasi
           </Link>
-          <Link to="/tentang" className="text-white text-sm md:text-xl hover:text-gray-300">
+          <Link to="/tentang" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
             Tentang
           </Link>
-          <Link to="/kontak" className="text-white text-sm md:text-xl hover:text-gray-300">
+          <Link to="/kontak" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
             Kontak
           </Link>
         </div>
