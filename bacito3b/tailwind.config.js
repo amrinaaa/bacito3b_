@@ -11,6 +11,8 @@ export default {
         secondary: "#7AB2B2",
         based: "#EEF7FF",
         softblue: "#CDE8E5",
+        bluesoft: "#EAF5FE",
+        birufoter : "#A6CFE0",
 
         latar0: "#A6CFE0",
         latar1: "#EAF5FE",
