@@ -1,4 +1,4 @@
-import React from 'react';
+
 import destinations from '../data/destinasi';
 import panah from '../assets/panah.png';
 import lokasiIcon from '../assets/lokasi.png';
