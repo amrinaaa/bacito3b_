@@ -5,7 +5,6 @@ import pantaiKemala from '../assets/kemala.png';
 import tamanBekapai from '../assets/bekapai.png';
 import banuaPatra from '../assets/banuaPatra.png';
 
-
 const destinations = [
     {
       id: 1,
@@ -40,7 +39,7 @@ const destinations = [
         image: pantaiKemala,
       },
       {
-        id: 4,
+        id: 5,
         name: 'Taman Bekapai',
         location: 'Balikpapan Kota',
         price: 'IDR Gratis',
@@ -48,7 +47,7 @@ const destinations = [
         image: tamanBekapai,
       },
       {
-        id: 4,
+        id: 6,
         name: 'Pantai Banua Patra',
         location: 'Balikpapan Kota',
         price: 'IDR 10.000',
