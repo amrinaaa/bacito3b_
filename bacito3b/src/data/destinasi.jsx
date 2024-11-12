@@ -13,6 +13,7 @@ const destinations = [
       price: 'IDR 25.000',
       rating: 4.5,
       image: pantaiManggar,
+      description: 'Sebenarnya nama pantai ini adalah Segarasari, namun kemudian terkenal dengan nama Pantai Manggar. Manggar sendiri adalah nama desa dari lokasi pantai tersebut. Pantai Manggar merupakan salah satu wisata alam dari kota Balikpapan. Hal itu karena pantai ini memiliki pemandangan alam yang sangat mempesona, laut biru berpadu dengan pasir putih bersih menjadi sajian yang memanjakan mata. Selain itu wisata ini juga menjadi favorit karena memiliki banyak wahana. Berbagai keseruan di air seperti banana-boat, jet ski hingga perahu ada di pantai ini.',
     },
     {
       id: 2,
