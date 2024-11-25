@@ -32,7 +32,7 @@ const Destinasi = () => {
         {destinations.map((destination) => (
           <div
             key={destination.id}
-            className="border rounded-lg shadow-md p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+            className="border rounded-lg shadow-md p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:bg-gray-100 transition duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
             data-aos="fade-up"
             data-aos-delay= {`${destination.id * 100}`}
             onClick={() => handleDestinationClick(destination)}          
