@@ -5,7 +5,7 @@ import pantaiKemala from '../assets/kemala.png';
 import tamanBekapai from '../assets/bekapai.png';
 import banuaPatra from '../assets/banuaPatra.png';
 
-const destinations = [
+const destination = [
     {
       id: 1,
       name: 'Pantai Manggar Segarasari',
@@ -68,5 +68,5 @@ const destinations = [
       },
   ];
   
-  export default destinations;
+  export default destination;
   

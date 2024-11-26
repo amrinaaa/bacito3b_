@@ -3,9 +3,9 @@ import LogoBiru from '../assets/logobiru.png';
 
 const Tentang = () => {
   return (
-    <div className="flex flex-col items-center p-6 md:p-12">
+    <div className="flex flex-col items-center p-6 md:p-12" id='tentang'>
       <div className="flex justify-between items-center w-full mb-6">
-        <h1 className="font-poppins text-xl md:text-2xl font-bold text-font_gelap">
+        <h1 className="font-poppins text-xl md:text-2xl font-bold text-font_gelap p-4">
           Tentang Kami
         </h1>
       </div>

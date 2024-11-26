@@ -4,6 +4,7 @@ import panah from '../assets/panah.png';
 import lokasiIcon from '../assets/lokasi.png';
 import hargaIcon from '../assets/price.png';
 import PopUpDesitinasi from './PopUpDesitinasi';
+import { Link } from 'react-router-dom';
 
 const Destinasi = () => {
   const [selectedDestination, setSelectedDestination] = useState(null);
@@ -17,15 +18,15 @@ const Destinasi = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-6"> 
+    <div className="flex flex-col items-center p-6" id='destinasi'> 
       <div className="flex justify-between items-center w-full mb-6"> 
         {/* Kontainer untuk judul dan tombol */}
         <h1 className="font-poppins text-2xl font-bold text-font_gelap">Destinasi Terpopuler</h1>
         <div className="text-center"> {/* Mengatur tombol agar di kanan */}
-          <button className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center">
+          <Link to="/destinasi-pariwisata" className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center">
             Selengkapnya 
             <img src={panah} alt="Arrow" className="ml-2 w-4 h-4" /> {/* Menambahkan ikon panah */}
-          </button>
+          </Link>
         </div>
       </div>
       <div className="p-4 flex flex-wrap justify-center gap-4"> {/* Memusatkan kotak destinasi */}

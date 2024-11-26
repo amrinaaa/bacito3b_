@@ -35,19 +35,19 @@ const PopUpDestinasi = ({ destination, onClose }) => {
 
         <div className="grid grid-cols-3 gap-2 p-6">
           <div className="col-span-2">
-            <img style={{ boxShadow: "0 4px 6px rgba(0.6, 0.6, 0.6, 0.6)" }}
+            <img 
               src={destination.image}
               alt={destination.name}
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
           <div className="flex flex-col gap-2">
-            <img style={{ boxShadow: "0 4px 6px rgba(0.6, 0.6, 0.6, 0.6)" }}
+            <img 
               src={destination.image}
               alt={destination.name}
               className="w-full h-[calc(50%-4px)] object-cover rounded-lg"
             />
-            <img style={{ boxShadow: "0 4px 6px rgba(0.6, 0.6, 0.6, 0.6)" }}
+            <img 
               src={destination.image}
               alt={destination.name}
               className="w-full h-[calc(50%-4px)] object-cover rounded-lg"

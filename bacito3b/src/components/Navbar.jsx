@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-latar0 p-2 fixed top-0 left-0 w-full z-50">
+    <nav className="sticky bg-latar0 p-2 fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <img src="/src/assets/logo.png" alt="Logo" className="h-12 w-auto" />
@@ -31,7 +31,7 @@ const Navbar = () => {
             style={{ transition: 'top 0.3s ease-in-out' }} // Efek transisi untuk menu
           >
             <li>
-              <Link to="/beranda" className="font-sans block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+              <Link to="/" className="font-sans block text-white text-sm md:text-xl p-4 hover:text-gray-300">
                 Beranda
               </Link>
             </li>
@@ -41,13 +41,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/tentang" className="font-sans text-white text-sm md:text-xl p-4 hover:text-gray-300">
-                Tentang
+              <Link to="/berita" className="font-sans text-white text-sm md:text-xl p-4 hover:text-gray-300">
+                Berita
               </Link>
             </li>
             <li>
-              <Link to="/kontak" className="font-sans block text-white text-sm md:text-xl p-4 hover:text-gray-300">
-                Kontak
+              <Link to="/tentang" className="font-sans block text-white text-sm md:text-xl p-4 hover:text-gray-300">
+                Tentang
               </Link>
             </li>
           </ul>
@@ -55,20 +55,18 @@ const Navbar = () => {
 
         {/* Menu Navbar untuk tampilan desktop */}
         <div className="hidden md:flex space-x-4">
-          <Link to="/beranda" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
-            Beranda
-          </Link>
-          <Link to="/destinasi" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
-            Destinasi
-          </Link>
-          <Link to="/tentang" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
+        <a href="/" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">Beranda</a>
+          
+          <a href="#destinasi" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">Destinasi</a>
+
+          <a href="#berita" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
+            Berita
+          </a>
+          <a href="#tentang" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
             Tentang
-          </Link>
-          <Link to="/kontak" className="font-sans text-white text-sm md:text-xl hover:text-gray-300">
-            Kontak
-          </Link>
+          </a>
         </div>
-      </div>
+      </div>  
     </nav>
   );
 };
