@@ -1,9 +1,21 @@
-
+import { useState } from 'react';
 import destinations from '../data/destinasi';
 import panah from '../assets/panah.png';
 import lokasiIcon from '../assets/lokasi.png';
 import hargaIcon from '../assets/price.png';
+import PopUpDesitinasi from './PopUpDesitinasi';
+
 const Destinasi = () => {
+  const [selectedDestination, setSelectedDestination] = useState(null);
+
+  const handleDestinationClick = (destination) => {
+    setSelectedDestination(destination);
+  };
+
+  const closePopup = () => {
+    setSelectedDestination(null);
+  };
+
   return (
     <div className="flex flex-col items-center p-6"> 
       <div className="flex justify-between items-center w-full mb-6"> 
@@ -20,9 +32,10 @@ const Destinasi = () => {
         {destinations.map((destination) => (
           <div
             key={destination.id}
-            className="border rounded-lg shadow-md p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+            className="border rounded-lg shadow-md p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:bg-gray-100 transition duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
             data-aos="fade-up"
-            data-aos-delay= {`${destination.id * 100}`}          
+            data-aos-delay= {`${destination.id * 100}`}
+            onClick={() => handleDestinationClick(destination)}          
           >
             <img
               src={destination.image}
@@ -44,6 +57,11 @@ const Destinasi = () => {
           </div>
         ))}
       </div>
+
+      <PopUpDesitinasi 
+        destination={selectedDestination} 
+        onClose={closePopup} 
+      />
     </div>
   );
 }
