@@ -17,7 +17,7 @@ const Beranda = () => {
             </p>
             <Link to="/selengkapnya">
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/90 to-transparent"></div>
-              <button className="font-poppins mt-8 px-6 py-2 text-sm md:text-base bg-button rounded-2xl hover:bg-button transition duration-300">
+              <button className="font-poppins mt-8 px-6 py-2 text-sm md:text-base bg-button rounded-2xl hover:bg-button">
                 Ayo Jelajah!
               </button>
             </Link>
