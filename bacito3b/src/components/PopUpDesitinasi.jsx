@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiClock } from "react-icons/fi";
 
 const PopUpDestinasi = ({ destination, onClose }) => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   if (!destination) return null;
+
+  const showNextImage = () => {
+    setSelectedImage((prevIndex) =>
+      (prevIndex + 1) % destination.additionalImages.length
+    );
+  };
+  
+  const showPrevImage = () => {
+    setSelectedImage((prevIndex) =>
+      (prevIndex - 1 + destination.additionalImages.length) % destination.additionalImages.length
+    );
+  };
 
   return (
     <div 
@@ -38,22 +52,65 @@ const PopUpDestinasi = ({ destination, onClose }) => {
             <img 
               src={destination.image}
               alt={destination.name}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-lg cursor-pointer"
+              onClick={() => setSelectedImage(0)}
             />
           </div>
-          <div className="flex flex-col gap-2">
-            <img 
-              src={destination.image}
-              alt={destination.name}
-              className="w-full h-[calc(50%-4px)] object-cover rounded-lg"
-            />
-            <img 
-              src={destination.image}
-              alt={destination.name}
-              className="w-full h-[calc(50%-4px)] object-cover rounded-lg"
-            />
-          </div>
+          {destination.additionalImages?.map((img, index) => (
+            <div className="flex flex-col gap-2">
+              <img 
+                key={index}
+                src={img}
+                alt={`Additional ${index}`}
+                className="w-full h-[calc(50%-4px)] object-cover rounded-lg cursor-pointer"
+                onClick={() => setSelectedImage(index)}
+              />
+              <img 
+                key={index}
+                src={img}
+                alt={`Additional ${index}`}
+                className="w-full h-[calc(50%-4px)] object-cover rounded-lg"
+                onClick={() => setSelectedImage(index)}
+              />
+            </div>
+          ))}
         </div>
+
+        {selectedImage !== null && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+            onClick={() => setSelectedImage(null)} // Tutup modal
+          >
+            <div
+              className="bg-white rounded-lg p-4 relative modal-zoom"
+              onClick={(e) => e.stopPropagation()} // Cegah klik keluar
+            >
+              <img
+                src={destination.additionalImages[selectedImage]}
+                alt={`Image ${selectedImage}`}
+                className="max-w-[90vw] max-h-[80vh] object-contain"
+              />
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-700"
+              >
+                ×
+              </button>
+              <button
+                onClick={showPrevImage}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full px-3 py-2"
+              >
+                ‹
+              </button>
+              <button
+                onClick={showNextImage}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full px-3 py-2"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-2 gap-6 p-6">
           <div className="bg-white-100 rounded-lg w-full h-full min-h-[300px] p-4" style={{ boxShadow: "0 4px 6px 2px rgba(0.6, 0.6, 0.6, 0.6)" }}>

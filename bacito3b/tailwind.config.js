@@ -69,9 +69,14 @@ export default {
           '80%': { transform: 'scale(1.05)', opacity: '1' },
           '100%': { transform: 'scale(1)' },
         },
+        zoomIn: {
+          '0%': { transform: 'scale(0.7)', opacity: '0' },
+          '100%': { transform: 'scale(1)', opacity: '1' },
+        },
       },
       animation: {
         popIn: 'popIn 0.5s ease-out',
+        zoomIn: 'zoomIn 0.3s ease-in-out',
       },
     },
   },

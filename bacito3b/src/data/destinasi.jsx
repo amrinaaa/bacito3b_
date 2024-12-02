@@ -1,5 +1,6 @@
 import pulauTukung from '../assets/pulautukung.png';
 import pantaiManggar from '../assets/pantaimanggar.png';
+import pantaiManggar1 from '../assets/pantaimanggar1.png';
 import kebunRaya from '../assets/krb.png';
 import pantaiKemala from '../assets/kemala.png';
 import tamanBekapai from '../assets/bekapai.png';
@@ -13,6 +14,10 @@ const destination = [
       price: 'IDR 25.000',
       rating: 4.5,
       image: pantaiManggar,
+      additionalImages: [
+        // pantaiManggar,
+        pantaiManggar1
+      ],
       description: 'Sebenarnya nama pantai ini adalah Segarasari, namun kemudian terkenal dengan nama Pantai Manggar. Manggar sendiri adalah nama desa dari lokasi pantai tersebut. Pantai Manggar merupakan salah satu wisata alam dari kota Balikpapan. Hal itu karena pantai ini memiliki pemandangan alam yang sangat mempesona, laut biru berpadu dengan pasir putih bersih menjadi sajian yang memanjakan mata. Selain itu wisata ini juga menjadi favorit karena memiliki banyak wahana. Berbagai keseruan di air seperti banana-boat, jet ski hingga perahu ada di pantai ini.',
       maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1493.6431602969833!2d116.97881932696893!3d-1.2141551157060277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df14f816ad571b5%3A0xacb7c2e8d6cfbd97!2sManggar%20Beach!5e0!3m2!1sen!2sid!4v1731959231409!5m2!1sen!2sid',
     },
