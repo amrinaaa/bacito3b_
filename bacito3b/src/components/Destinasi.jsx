@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import destinations from '../data/destinasi';
-import panah from '../assets/panah.png';
+import { FaArrowRight } from "react-icons/fa";
 import { FaMapMarkerAlt } from "react-icons/fa";
-// import hargaIcon from '../assets/price.png';
 import { FaTag } from "react-icons/fa";
 import PopUpDesitinasi from './PopUpDestinasi';
 import { Link } from 'react-router-dom';
@@ -24,10 +23,14 @@ const Destinasi = () => {
         {/* Kontainer untuk judul dan tombol */}
         <h1 className="font-poppins text-2xl font-bold text-font_gelap">Destinasi Terpopuler</h1>
         <div className="text-center"> {/* Mengatur tombol agar di kanan */}
-          <Link to="/destinasi-pariwisata" className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center">
-            Selengkapnya 
-            <img src={panah} alt="Arrow" className="ml-2 w-4 h-4" /> {/* Menambahkan ikon panah */}
-          </Link>
+        <Link
+          to="/destinasi-pariwisata"
+          className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-icon hover:text-white transition duration-200 hover:scale-105 hover:shadow-lg flex items-center"
+        >
+          Selengkapnya
+          {/* Ganti <img> dengan ikon React */}
+          <FaArrowRight className="ml-2 w-4 h-4" />
+        </Link>
         </div>
       </div>
       <div className="p-4 flex flex-wrap justify-center gap-4"> {/* Memusatkan kotak destinasi */}
@@ -52,9 +55,10 @@ const Destinasi = () => {
             </div>
             <div className="flex justify-between items-center mt-4">
               <span className="text-yellow-500 font-bold">⭐ {destination.rating}</span>
-              <div className="font-sans flex items-center text-sm text-font_gelap text-left">
+              <div className="flex items-center">
+                {/* Ganti <img> dengan ikon React */}
                 <FaTag className="mr-1 w-4 h-4 text-blue-500" /> {/* Ikon harga */}
-                <p>{price}</p> {/* Harga */}
+                <span className="font-bold font-sans">{destination.price}</span>
               </div>
             </div>
           </div>

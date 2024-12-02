@@ -10,7 +10,7 @@ const PopUpDestinasi = ({ destination, onClose }) => {
       onClick={onClose}
     >
       <div 
-        className="relative bg-white rounded-xl shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto animate-popIn"
+        className="relative bg-white rounded-xl shadow-lg w-11/12 sm:w-3/4 md:w-2/3 lg:w-2/3 max-h-[90vh] overflow-y-auto animate-popIn"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-4 border-b">
@@ -33,15 +33,16 @@ const PopUpDestinasi = ({ destination, onClose }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 p-6">
-          <div className="col-span-2">
+        {/* Responsive Grid Layout for Images */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+          <div className="col-span-1 md:col-span-2">
             <img 
               src={destination.image}
               alt={destination.name}
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <img 
               src={destination.image}
               alt={destination.name}
@@ -55,7 +56,8 @@ const PopUpDestinasi = ({ destination, onClose }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 p-6">
+        {/* Responsive Grid Layout for Information */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
           <div className="bg-white-100 rounded-lg w-full h-full min-h-[300px] p-4" style={{ boxShadow: "0 4px 6px 2px rgba(0.6, 0.6, 0.6, 0.6)" }}>
             <iframe
               src={destination.maps} 
@@ -86,7 +88,7 @@ const PopUpDestinasi = ({ destination, onClose }) => {
 
           <div>
             <h3 className="font-bold mb-2 text-left pl-4">Description</h3>
-            <div className="bg-blue-100 rounded-lg w-full  min-h-[300px] p-4">
+            <div className="bg-blue-100 rounded-lg w-full min-h-[300px] p-4">
               <p className="text-gray-600 text-justify px-4">{destination.description}</p>
             </div>
           </div>

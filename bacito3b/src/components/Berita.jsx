@@ -1,5 +1,5 @@
 import React from 'react';
-import panah from '../assets/panah.png';
+import { FaArrowRight } from "react-icons/fa";
 import Bekantan from '../assets/bekantan.png';
 import { Link } from 'react-router-dom';
 
@@ -12,10 +12,10 @@ const Berita = () => {
         {/* Kontainer untuk judul dan tombol */}
         <h1 className="font-poppins text-2xl font-bold text-font_gelap">Berita</h1>
         <div className="text-center"> {/* Mengatur tombol agar di kanan */}
-          <Link to="/berita-pariwisata" className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center">
-            Selengkapnya 
-            <img src={panah} alt="Arrow" className="ml-2 w-4 h-4" /> {/* Menambahkan ikon panah */}
-          </Link>
+        <Link to="/berita-pariwisata" className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-icon hover:text-white transition duration-200 hover:scale-105 hover:shadow-lg flex items-center">
+          Selengkapnya 
+          <FaArrowRight className="ml-2 w-3 h-3 md:w-4 md:h-4 text-white" /> {/* Ikon panah */}
+        </Link>
         </div>
       </div>
 
