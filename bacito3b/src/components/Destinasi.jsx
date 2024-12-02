@@ -92,12 +92,16 @@ const Destinasi = () => {
         </h1>
         <button 
           onClick={handleShowMoreDetails}
-          className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center"
+          className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button-dark transition duration-300 flex items-center space-x-2 group"
         >
-          {showMoreDetails ? "Tampilkan Lebih Sedikit" : "Selengkapnya"}
-          <img src={panah} alt="Arrow" className="ml-2 w-4 h-4" />
+          <span>{showMoreDetails ? "Tampilkan Lebih Sedikit" : "Selengkapnya"}</span>
+          <img 
+            src={panah} 
+            alt="Panah" 
+            className="w-4 h-4 group-hover:brightness-75 transition duration-300"
+          />
         </button>
-      </div>
+              </div>
 
       <div className="p-4 flex flex-wrap justify-center gap-4">
         {destinations.slice(0, visibleDestinations).map((destination) => (
