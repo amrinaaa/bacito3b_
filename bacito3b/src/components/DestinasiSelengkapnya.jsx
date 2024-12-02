@@ -38,6 +38,7 @@ const DestinasiSelengkapnya = () => {
             <li><a onClick={() => handleLocationChange({ target: { value: 'Balikpapan Utara' } })}>Balikpapan Utara</a></li>
             <li><a onClick={() => handleLocationChange({ target: { value: 'Balikpapan Barat' } })}>Balikpapan Barat</a></li>
             <li><a onClick={() => handleLocationChange({ target: { value: 'Balikpapan Kota' } })}>Balikpapan Kota</a></li>
+            <li><a onClick={() => handleLocationChange({ target: { value: 'Balikpapan Selata' } })}>Balikpapan Selatan</a></li>
           </ul>
         </div>
 

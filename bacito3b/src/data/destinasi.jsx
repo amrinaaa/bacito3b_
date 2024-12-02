@@ -66,6 +66,36 @@ const destination = [
         description: ' Pantai ini terkenal dengan suasananya yang nyaman dan tenang, menjadikannya tempat yang ideal untuk menikmati pemandangan matahari terbenam yang indah di tepi laut. Pantai Banua Patra memiliki karakteristik yang berbeda dibandingkan pantai-pantai lain di Balikpapan, karena pantainya lebih berbatu. Di sekitar pantai, terdapat area duduk dan tempat makan, sehingga pengunjung dapat menikmati makanan ringan sambil melihat pemandangan laut. Lokasinya yang dekat dengan pusat kota membuat Pantai Banua Patra mudah dijangkau, baik dengan kendaraan pribadi maupun transportasi umum.',
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.8634773521796!2d116.81100818619271!3d-1.2818260624837812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1474e53a0b13b%3A0x5d5bde15f37d0b27!2sPantai%20Batu%20-%20Batu%20Banua%20Patra!5e0!3m2!1sen!2sid!4v1731960128260!5m2!1sen!2sid',
       },
+      {
+        id: 7,
+        name: 'Pantai Banua Patra',
+        location: 'Balikpapan Kota',
+        price: 'IDR 10.000',
+        rating: 4.5,
+        image: banuaPatra,
+        description: ' Pantai ini terkenal dengan suasananya yang nyaman dan tenang, menjadikannya tempat yang ideal untuk menikmati pemandangan matahari terbenam yang indah di tepi laut. Pantai Banua Patra memiliki karakteristik yang berbeda dibandingkan pantai-pantai lain di Balikpapan, karena pantainya lebih berbatu. Di sekitar pantai, terdapat area duduk dan tempat makan, sehingga pengunjung dapat menikmati makanan ringan sambil melihat pemandangan laut. Lokasinya yang dekat dengan pusat kota membuat Pantai Banua Patra mudah dijangkau, baik dengan kendaraan pribadi maupun transportasi umum.',
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.8634773521796!2d116.81100818619271!3d-1.2818260624837812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1474e53a0b13b%3A0x5d5bde15f37d0b27!2sPantai%20Batu%20-%20Batu%20Banua%20Patra!5e0!3m2!1sen!2sid!4v1731960128260!5m2!1sen!2sid',
+      },
+      {
+        id: 8,
+        name: 'Pantai Banua Patra',
+        location: 'Balikpapan Kota',
+        price: 'IDR 10.000',
+        rating: 4.5,
+        image: banuaPatra,
+        description: ' Pantai ini terkenal dengan suasananya yang nyaman dan tenang, menjadikannya tempat yang ideal untuk menikmati pemandangan matahari terbenam yang indah di tepi laut. Pantai Banua Patra memiliki karakteristik yang berbeda dibandingkan pantai-pantai lain di Balikpapan, karena pantainya lebih berbatu. Di sekitar pantai, terdapat area duduk dan tempat makan, sehingga pengunjung dapat menikmati makanan ringan sambil melihat pemandangan laut. Lokasinya yang dekat dengan pusat kota membuat Pantai Banua Patra mudah dijangkau, baik dengan kendaraan pribadi maupun transportasi umum.',
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.8634773521796!2d116.81100818619271!3d-1.2818260624837812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1474e53a0b13b%3A0x5d5bde15f37d0b27!2sPantai%20Batu%20-%20Batu%20Banua%20Patra!5e0!3m2!1sen!2sid!4v1731960128260!5m2!1sen!2sid',
+      },
+      {
+        id: 9,
+        name: 'Pantai Banua Patra',
+        location: 'Balikpapan Kota',
+        price: 'IDR 10.000',
+        rating: 4.5,
+        image: banuaPatra,
+        description: ' Pantai ini terkenal dengan suasananya yang nyaman dan tenang, menjadikannya tempat yang ideal untuk menikmati pemandangan matahari terbenam yang indah di tepi laut. Pantai Banua Patra memiliki karakteristik yang berbeda dibandingkan pantai-pantai lain di Balikpapan, karena pantainya lebih berbatu. Di sekitar pantai, terdapat area duduk dan tempat makan, sehingga pengunjung dapat menikmati makanan ringan sambil melihat pemandangan laut. Lokasinya yang dekat dengan pusat kota membuat Pantai Banua Patra mudah dijangkau, baik dengan kendaraan pribadi maupun transportasi umum.',
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.8634773521796!2d116.81100818619271!3d-1.2818260624837812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1474e53a0b13b%3A0x5d5bde15f37d0b27!2sPantai%20Batu%20-%20Batu%20Banua%20Patra!5e0!3m2!1sen!2sid!4v1731960128260!5m2!1sen!2sid',
+      },
   ];
   
   export default destination;
