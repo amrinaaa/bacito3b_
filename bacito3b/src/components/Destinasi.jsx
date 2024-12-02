@@ -47,6 +47,10 @@ const Destinasi = () => {
     <div className="flex flex-col items-center p-6" id='destinasi'> 
       {showMoreDetails && (
         <div className="mt-20 w-full font-poppins">
+          {/* New centered title */}
+          <h2 className="text-center text-2xl font-bold text-font_gelap mb-6">
+          Telusuri Destinasi Wisata Terbaik yang Tersebar di Kota Balikpapan
+          </h2>
           <div className="flex items-center justify-between bg-blue-50 p-8 rounded-3xl mx-auto w-[90%] max-w-6xl mobile:w-4/5"> 
            <div className="grid grid-cols-1 gap-4 items-center place-content-stretch mx-16 mobile:w-full mobile:mx-0 tablet:grid-cols-2 laptop:grid-cols-2">
               <div className="dropdown w-full">
@@ -93,7 +97,7 @@ const Destinasi = () => {
         </h1>
         <button 
           onClick={handleShowMoreDetails}
-          className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button-dark transition duration-300 flex items-center space-x-2 group"
+          className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-icon hover:text-white transition duration-200 hover:scale-105 hover:shadow-lg flex items-center space-x-2"
         >
           <span>{showMoreDetails ? "Tampilkan Lebih Sedikit" : "Selengkapnya"}</span>
           <FaArrowRight className="group-hover:brightness-75 transition duration-300" />
