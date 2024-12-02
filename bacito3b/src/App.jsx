@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import BeritaSelengkapnya from './components/BeritaSelengkapnya';
 import DestinasiSelengkapnya from './components/DestinasiSelengkapnya';
-import PopUpDestinasi from './components/PopUpDesitinasi';
+import PopUpDestinasi from './components/PopUpDestinasi';
 import Footer from './components/Footer';
 import Beranda from './components/Beranda';
 import Destinasi from './components/Destinasi';
@@ -11,12 +11,6 @@ import Berita from './components/Berita';
 import Tentang from './components/Tentang';
 
 const App = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Durasi animasi dalam milidetik
-      once: true,     // Animasi hanya berjalan sekali
-    });
-  }, []);
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">

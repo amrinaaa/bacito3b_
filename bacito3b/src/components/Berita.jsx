@@ -1,20 +1,21 @@
 import React from 'react';
 import panah from '../assets/panah.png';
 import Bekantan from '../assets/bekantan.png';
+import { Link } from 'react-router-dom';
 
 
 const Berita = () => {
   return (
-    <div className="flex flex-col items-center p-12">
+    <div className="flex flex-col items-center p-12" id='berita'>
       {/* Flex container for title and button alignment */}
       <div className="flex justify-between items-center w-full mb-6"> 
         {/* Kontainer untuk judul dan tombol */}
         <h1 className="font-poppins text-2xl font-bold text-font_gelap">Berita</h1>
         <div className="text-center"> {/* Mengatur tombol agar di kanan */}
-          <button className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center">
+          <Link to="/berita-pariwisata" className="font-poppins mt-8 px-6 py-2 text-sm md:text-base text-white bg-button rounded-2xl hover:bg-button transition duration-300 flex items-center">
             Selengkapnya 
             <img src={panah} alt="Arrow" className="ml-2 w-4 h-4" /> {/* Menambahkan ikon panah */}
-          </button>
+          </Link>
         </div>
       </div>
 
