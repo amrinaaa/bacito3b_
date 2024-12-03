@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { FiClock } from "react-icons/fi";
 
 const PopUpDestinasi = ({ destination, onClose }) => {
@@ -6,16 +6,14 @@ const PopUpDestinasi = ({ destination, onClose }) => {
 
   if (!destination) return null;
 
+  const images = [destination.image, ...destination.additionalImages];
+
   const showNextImage = () => {
-    setSelectedImage((prevIndex) =>
-      (prevIndex + 1) % destination.additionalImages.length
-    );
+    setSelectedImage((prevIndex) => (prevIndex + 1) % images.length);
   };
-  
+
   const showPrevImage = () => {
-    setSelectedImage((prevIndex) =>
-      (prevIndex - 1 + destination.additionalImages.length) % destination.additionalImages.length
-    );
+    setSelectedImage((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
   return (
@@ -24,7 +22,7 @@ const PopUpDestinasi = ({ destination, onClose }) => {
       onClick={onClose}
     >
       <div 
-        className="relative bg-white rounded-xl shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto animate-popIn"
+        className="relative bg-white rounded-xl shadow-lg w-11/12 sm:w-3/4 md:w-2/3 lg:w-2/3 max-h-[90vh] overflow-y-auto animate-popIn"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-4 border-b">
@@ -47,8 +45,9 @@ const PopUpDestinasi = ({ destination, onClose }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 p-6">
-          <div className="col-span-2">
+        {/* Responsive Grid Layout for Images */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
+          <div className="col-span-1 md:col-span-2">
             <img 
               src={destination.image}
               alt={destination.name}
@@ -56,40 +55,36 @@ const PopUpDestinasi = ({ destination, onClose }) => {
               onClick={() => setSelectedImage(0)}
             />
           </div>
-          {destination.additionalImages?.map((img, index) => (
-            <div className="flex flex-col gap-2">
-              <img 
-                key={index}
-                src={img}
-                alt={`Additional ${index}`}
-                className="w-full h-[calc(50%-4px)] object-cover rounded-lg cursor-pointer"
-                onClick={() => setSelectedImage(index)}
-              />
-              <img 
-                key={index}
-                src={img}
-                alt={`Additional ${index}`}
-                className="w-full h-[calc(50%-4px)] object-cover rounded-lg"
-                onClick={() => setSelectedImage(index)}
-              />
-            </div>
-          ))}
+          <div className="col-span-1 flex flex-col gap-4">
+            {destination.additionalImages?.map((img, index) => (
+              <div key={index} className={`col-span-1 ${index === 0 ? "md:col-start-2 md:row-start-1" : "md:col-start-2 md:row-start-2"}`}>
+                <img 
+                  src={img}
+                  alt={`Additional ${index}`}
+                  className="w-full h-full object-cover rounded-lg cursor-pointer"
+                  onClick={() => setSelectedImage(index + 1)}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {selectedImage !== null && (
           <div
             className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-            onClick={() => setSelectedImage(null)} // Tutup modal
+            onClick={() => setSelectedImage(null)}
           >
             <div
               className="bg-white rounded-lg p-4 relative modal-zoom"
-              onClick={(e) => e.stopPropagation()} // Cegah klik keluar
+              onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={destination.additionalImages[selectedImage]}
-                alt={`Image ${selectedImage}`}
-                className="max-w-[90vw] max-h-[80vh] object-contain"
-              />
+              <div className="w-[90vw] h-[60vh] max-w-[600px] max-h-[400px] aspect-square flex items-center justify-center">
+                <img
+                  src={selectedImage === 0 ? destination.image : destination.additionalImages[selectedImage - 1]}
+                  alt={`Image ${selectedImage}`}
+                  className="w-full h-full object-contain rounded-lg"
+                />
+              </div>
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-700"
@@ -112,7 +107,8 @@ const PopUpDestinasi = ({ destination, onClose }) => {
           </div>
         )}
 
-        <div className="grid grid-cols-2 gap-6 p-6">
+        {/* Responsive Grid Layout for Information */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
           <div className="bg-white-100 rounded-lg w-full h-full min-h-[300px] p-4" style={{ boxShadow: "0 4px 6px 2px rgba(0.6, 0.6, 0.6, 0.6)" }}>
             <iframe
               src={destination.maps} 
@@ -143,7 +139,7 @@ const PopUpDestinasi = ({ destination, onClose }) => {
 
           <div>
             <h3 className="font-bold mb-2 text-left pl-4">Description</h3>
-            <div className="bg-blue-100 rounded-lg w-full  min-h-[300px] p-4">
+            <div className="bg-blue-100 rounded-lg w-full min-h-[300px] p-4">
               <p className="text-gray-600 text-justify px-4">{destination.description}</p>
             </div>
           </div>

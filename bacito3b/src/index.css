@@ -4,8 +4,8 @@
 
 @layer base{
     html {
-        font-family: "Open Sans", sans-serif;
         font-family: "Poppins", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-family: "Kaisei Decol", serif;
     }
 }
