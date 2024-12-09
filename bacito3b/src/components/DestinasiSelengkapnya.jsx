@@ -93,12 +93,6 @@ const DestinasiSelengkapnya = () => {
       
       <div className="mt-20 font-poppins">
         <h1 className='text-3xl font-bold text-font_gelap text-center mb-4'>Telusuri Destinasi Wisata Terbaik yang Tersebar di Kota Balikpapan </h1>
-      <div className="breadcrumbs text-sm mx-[180px] mb-4">
-        <ul>
-          <li><a href='/'>Home</a></li>
-          <li><a>Destinasi Selengkapnya</a></li>
-        </ul>
-      </div>
       <div className="flex items-center justify-between bg-blue-50 p-8 rounded-3xl mx-72 mobile:w-4/5 mobile:mx-auto ">
         <div className="grid grid-cols-1 gap-4 items-center place-content-stretch mx-16 mobile:w-full mobile:mx-0 tablet:grid-cols-2 laptop:grid-cols-2">
         <div className="flex flex-col w-full">
@@ -162,7 +156,7 @@ const DestinasiSelengkapnya = () => {
             key={destination.id}
             className="border rounded-lg shadow-md p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 hover:bg-gray-100 transition duration-200 hover:scale-105 hover:shadow-lg cursor-pointer"
             data-aos="fade-up"
-            data-aos-delay= {`${destination.id * 100}`}
+            data-aos-delay= {`${destination.id * 150}`}
             onClick={() => handleDestinationClick(destination)}          
           >
             <img

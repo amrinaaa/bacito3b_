@@ -1,5 +1,7 @@
 import pulauTukung from '../assets/pulautukung.png';
 import pantaiManggar from '../assets/pantaimanggar.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const berita = [
     {

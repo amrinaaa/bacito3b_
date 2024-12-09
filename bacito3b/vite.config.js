@@ -8,4 +8,9 @@ export default defineConfig({
     extend: {},
   },
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      external: ['aos']
+    }
+  }
 })
