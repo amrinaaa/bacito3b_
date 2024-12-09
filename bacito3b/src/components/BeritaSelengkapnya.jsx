@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./Navbar";
-import berita from "../data/beritaSelengkapnya";
+import berita from "../data/beritaselengkapnya";
 import Footer from "./Footer";
 
 const BeritaSelengkapnya = () => {
