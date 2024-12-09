@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import{ useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky bg-latar0 p-2 fixed top-0 left-0 w-full z-50">
+    <nav className="sticky bg-latar0 p-2 top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <img src="/src/assets/logo.png" alt="Logo" className="h-12 w-auto" />

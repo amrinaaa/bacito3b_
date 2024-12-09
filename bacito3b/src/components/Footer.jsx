@@ -1,9 +1,9 @@
-import React from 'react';
+
 import Logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
-import Telegram from '../assets/Telegram2.png';
-import Discord from '../assets/Discord2.png';
-import Linkedin from '../assets/Linkedin2.png';
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -52,21 +52,21 @@ const Footer = () => {
         <div className="col-span-1 md:col-span-2">
           <h3 className="font-poppins text-white text-xl md:text-2xl font-semibold mb-2">Kontak Kami:</h3>
           <ul className="flex space-x-4">
-            <li>
-              <button>
-                <img src={Telegram} alt="Telegram" className="w-8 h-8 md:w-10 md:h-10" />
-              </button>
-            </li>
-            <li>
-              <button>
-                <img src={Discord} alt="Discord" className="w-8 h-8 md:w-10 md:h-10" />
-              </button>
-            </li>
-            <li>
-              <button>
-                <img src={Linkedin} alt="LinkedIn" className="w-8 h-8 md:w-10 md:h-10" />
-              </button>
-            </li>
+          <li>
+            <button className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-icon rounded-full hover:bg-icon-200 transition duration-200 hover:scale-105 hover:shadow-lg">
+              <FaTelegramPlane className="text-white w-4 h-4" /> {/* Ukuran ikon lebih kecil */}
+            </button>
+          </li>
+          <li>
+            <button className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-icon rounded-full hover:bg-icon-200 transition duration-200 hover:scale-105 hover:shadow-lg">
+              <FaDiscord className="text-white w-4 h-4" /> {/* Ukuran ikon lebih kecil */}
+            </button>
+          </li>
+          <li>
+            <button className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-icon rounded-full hover:bg-icon-200 transition duration-200 hover:scale-105 hover:shadow-lg">
+              <FaLinkedinIn className="text-white w-4 h-4" /> {/* Ukuran ikon lebih kecil */}
+            </button>
+          </li>
           </ul>
         </div>
       </div>

@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import BeritaSelengkapnya from './components/BeritaSelengkapnya';
 import DestinasiSelengkapnya from './components/DestinasiSelengkapnya';
 import PopUpDestinasi from './components/PopUpDesitinasi';
-import Footer from './components/Footer';
+
 import Beranda from './components/Beranda';
 import Destinasi from './components/Destinasi';
 import Berita from './components/Berita';

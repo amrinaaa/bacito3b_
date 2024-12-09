@@ -1,5 +1,4 @@
-import React from 'react';
-import Navbar from './Navbar';
+
 import Beranda from './Beranda';
 import Destinasi from './Destinasi';
 import Berita from './Berita';

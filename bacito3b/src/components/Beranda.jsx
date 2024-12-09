@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
@@ -113,11 +113,11 @@ const Beranda = () => {
                 Balikpapan siap menyambutmu dengan destinasi wisata spektakuler,
                 pengalaman seru, dan keajaiban di setiap sudut!
               </p>
-              <Link to="/selengkapnya">
+              <Link to="/destinasi-pariwisata">
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-white/90 to-transparent"></div>
-                <button className="font-poppins mt-8 px-6 py-2 text-sm md:text-base bg-button rounded-2xl hover:bg-button transition duration-300">
-                  Ayo Jelajah!
-                </button>
+                  <button className="relative font-poppins mt-8 px-6 py-2 text-sm md:text-base bg-button text-white rounded-2xl hover:bg-icon hover:text-white transition duration-200 hover:scale-105 hover:shadow-lg">
+                    Ayo Jelajah!
+                  </button>
               </Link>
             </div>
           </div>
